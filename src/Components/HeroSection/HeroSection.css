@@ -1,3 +1,9 @@
+.purple-blur,
+.teal-blur {
+  border-radius: 50%;
+  filter: blur(150px);
+}
+
 .hero-container {
   height: 100vh;
   width: 100vw;
@@ -8,13 +14,13 @@
   text-align: center;
   padding: 0 30px;
   box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
 }
 
 .purple-blur {
   height: 600px;
   width: 700px;
-  border-radius: 50%;
-  filter: blur(150px);
   position: absolute;
   top: 5vh;
   left: 20vw;
@@ -24,32 +30,31 @@
 .teal-blur {
   height: 300px;
   width: 350px;
-  border-radius: 50%;
-  filter: blur(150px);
   position: absolute;
   top: 30vh;
   right: 20vw;
   background-color: #abd9d9;
 }
 
+.background-circle,
 .background-square {
-    height: 300px;
-    width: 300px;
-    transform: rotate(45deg);
-    position: absolute;
-    top: 125px;
-    right: -200px;
-    border: 1px solid rgba(171, 217, 217, 0.4);
+  height: 300px;
+  width: 300px;
+  position: absolute;
+}
+
+.background-square {
+  transform: rotate(45deg);
+  top: 125px;
+  right: -200px;
+  border: 1px solid rgba(171, 217, 217, 0.4);
 }
 
 .background-circle {
-    height: 300px;
-    width: 300px;
-    border-radius: 50%;
-    position: absolute;
-    bottom: -100px;
-    left: -100px;
-    border: 1px solid rgba(171, 217, 217, 0.4);
+  border-radius: 50%;
+  bottom: -100px;
+  left: -100px;
+  border: 1px solid rgba(171, 217, 217, 0.4);
 }
 
 .hero-section {
@@ -57,46 +62,46 @@
 }
 
 .headshot {
-    margin: 0;
+  margin: 0;
 }
 
 .hero-title {
-    position: relative;
-    z-index: 20;
-    margin-top: -80px;
-    margin-bottom: 5px;
-    font-family: 'Outfit', sans-serif;
-    font-weight: 700;
-    letter-spacing: 5px;
-    font-size: 80px;
-    background: linear-gradient(to right,#abd9d9, #8d8dda);
-    -webkit-background-clip: text; 
-    -webkit-text-fill-color: transparent; 
+  position: relative;
+  z-index: 20;
+  margin-top: -80px;
+  margin-bottom: 5px;
+  font-family: Outfit, sans-serif;
+  font-weight: 700;
+  letter-spacing: 5px;
+  font-size: 80px;
+  background: linear-gradient(to right, #abd9d9, #8d8dda);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero-subtitle {
-    margin: 0;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    color: #ABD9D9;
-    font-weight: 500;
-    font-size: 22px;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #abd9d9;
+  font-weight: 500;
+  font-size: 22px;
 }
 
 .social-logos {
-    position: absolute;
-    left: 25vw;
-    height: 200px;
-    opacity: 0.3;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  position: absolute;
+  left: 25vw;
+  height: 200px;
+  opacity: 0.3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .github-logo,
 .linkedin-logo {
-    width: 30px;
-    height: 30px;
-    margin: 10px;
-    cursor: pointer;
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+  cursor: pointer;
 }
