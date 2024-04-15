@@ -1,9 +1,3 @@
-.purple-blur,
-.teal-blur {
-  border-radius: 50%;
-  filter: blur(150px);
-}
-
 .hero-container {
   height: 100vh;
   width: 100vw;
@@ -16,45 +10,6 @@
   box-sizing: border-box;
   overflow: hidden;
   position: relative;
-}
-
-.purple-blur {
-  height: 600px;
-  width: 700px;
-  position: absolute;
-  top: 5vh;
-  left: 20vw;
-  background-color: #8d8dda;
-}
-
-.teal-blur {
-  height: 300px;
-  width: 350px;
-  position: absolute;
-  top: 30vh;
-  right: 20vw;
-  background-color: #abd9d9;
-}
-
-.background-circle,
-.background-square {
-  height: 300px;
-  width: 300px;
-  position: absolute;
-}
-
-.background-square {
-  transform: rotate(45deg);
-  top: 125px;
-  right: -200px;
-  border: 1px solid rgba(171, 217, 217, 0.4);
-}
-
-.background-circle {
-  border-radius: 50%;
-  bottom: -100px;
-  left: -100px;
-  border: 1px solid rgba(171, 217, 217, 0.4);
 }
 
 .hero-section {

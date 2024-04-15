@@ -7,10 +7,6 @@ import GithubLogo from '../../Images/github-mark-white.png';
 const HeroSection = () => {
   return (
     <div className='hero-container'>
-      <div className='purple-blur'></div>
-      <div className='teal-blur'></div>
-      <div className='background-circle'></div>
-      <div className='background-square'></div>
       <div className='social-logos'>
         <a target='#' href='https://github.com/camjohnson-code'>
           <img src={GithubLogo} alt='github-logo' className='github-logo' />
