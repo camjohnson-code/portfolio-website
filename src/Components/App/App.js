@@ -3,6 +3,7 @@ import React from 'react';
 import NavBar from '../NavBar/NavBar';
 import HeroSection from '../HeroSection/HeroSection';
 import Projects from '../Projects/Projects';
+import Skills from '../Skills/Skills';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <div className='background-square'></div>
       <HeroSection className='hero'/>
       <Projects className='projects'/>
+      <Skills className='skills'/>
     </div>
   );
 }

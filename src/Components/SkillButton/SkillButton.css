@@ -1,0 +1,15 @@
+.skill-button {
+  background: linear-gradient(to right, #abd9d9, #8d8dda);
+  color: black;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  height: 30px;
+  min-width: 70px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+}
