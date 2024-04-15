@@ -7,6 +7,8 @@
   font-size: calc(10px + 2vmin);
   color: white;
   font-family: 'Lato', sans-serif;
+  overflow-y: hidden;
+  position: relative;
 }
 
 .nav {
@@ -20,6 +22,7 @@
   border-radius: 50%;
   filter: blur(150px);
 }
+
 .purple-blur {
   height: 600px;
   width: 700px;
@@ -28,6 +31,7 @@
   left: 20vw;
   background-color: #8d8dda;
 }
+
 .teal-blur {
   height: 300px;
   width: 350px;
@@ -36,12 +40,14 @@
   right: 20vw;
   background-color: #abd9d9;
 }
+
 .background-circle,
 .background-square {
   height: 300px;
   width: 300px;
   position: absolute;
 }
+
 .background-square {
   transform: rotate(45deg);
   top: 125px;
@@ -51,7 +57,7 @@
 
 .background-circle {
   border-radius: 50%;
-  bottom: -100px;
+  top: 600px;
   left: -100px;
   border: 1px solid rgba(171, 217, 217, 0.4);
 }
