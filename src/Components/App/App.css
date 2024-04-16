@@ -7,7 +7,7 @@
   font-size: calc(10px + 2vmin);
   color: white;
   font-family: 'Lato', sans-serif;
-  overflow-y: hidden;
+  overflow: hidden;
   position: relative;
 }
 
@@ -46,6 +46,7 @@
   height: 300px;
   width: 300px;
   position: absolute;
+  z-index: 0;
 }
 
 .background-square {
@@ -60,8 +61,10 @@
   top: 600px;
   left: -100px;
   border: 1px solid rgba(171, 217, 217, 0.4);
+  z-index: 0;
 }
 
 .projects {
   margin-bottom: 20px;
+  z-index: 999;
 }
