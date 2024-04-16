@@ -18,6 +18,8 @@
 
 .headshot {
   margin: 0;
+  width: 400px;
+  height: auto;
 }
 
 .hero-title {
