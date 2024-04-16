@@ -3,12 +3,12 @@
   flex-direction: column;
   width: 100vw;
   box-sizing: border-box;
-  padding: 0 20px;
+  padding: 0 50px;
 }
 
 .projects-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .projects-title {
