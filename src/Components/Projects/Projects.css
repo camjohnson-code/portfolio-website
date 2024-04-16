@@ -1,0 +1,21 @@
+.projects {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  box-sizing: border-box;
+  padding: 0 50px;
+}
+
+.projects-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.projects-title {
+  font-family: 'Lato', sans-serif;
+  background: linear-gradient(to right, #abd9d9, #8d8dda);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 40px;
+  margin: 20px 0;
+}

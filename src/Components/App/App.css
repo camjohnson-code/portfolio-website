@@ -1,0 +1,70 @@
+.App {
+  background-color: #000222;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  font-family: 'Lato', sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+}
+
+.purple-blur,
+.teal-blur {
+  border-radius: 50%;
+  filter: blur(150px);
+}
+
+.purple-blur {
+  height: 600px;
+  width: 700px;
+  position: absolute;
+  top: 5vh;
+  left: 20vw;
+  background-color: #8d8dda;
+}
+
+.teal-blur {
+  height: 300px;
+  width: 350px;
+  position: absolute;
+  top: 30vh;
+  right: 20vw;
+  background-color: #abd9d9;
+}
+
+.background-circle,
+.background-square {
+  height: 300px;
+  width: 300px;
+  position: absolute;
+  z-index: 0;
+}
+
+.background-square {
+  transform: rotate(45deg);
+  top: 125px;
+  right: -200px;
+  border: 1px solid rgba(171, 217, 217, 0.4);
+}
+
+.background-circle {
+  border-radius: 50%;
+  top: 600px;
+  left: -100px;
+  border: 1px solid rgba(171, 217, 217, 0.4);
+  z-index: 0;
+}
+
+.projects {
+  margin-bottom: 20px;
+  z-index: 999;
+}
