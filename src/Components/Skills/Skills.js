@@ -10,6 +10,7 @@ const Skills = () => {
     'Node.js',
     'Express',
     'MongoDB',
+    'Typescript',
     'Git',
     'GitHub',
     'Cypress',
