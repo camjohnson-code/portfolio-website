@@ -100,6 +100,7 @@ textarea::placeholder,
 }
 
 .form-submit-button {
+  width: 95%;
   box-sizing: border-box;
   font-weight: 700;
   text-transform: uppercase;
@@ -108,4 +109,9 @@ textarea::placeholder,
   justify-content: center;
   align-items: center;
   cursor: pointer;
+}
+
+.error-message {
+  font-size: 14px;
+  text-align: center;
 }

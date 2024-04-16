@@ -1,16 +1,42 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './Contact.css';
 import LinkedInLogo from '../../Images/In-White-96@2x.png';
 import GithubLogo from '../../Images/github-mark-white.png';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
+  const formRef = useRef();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [formError, setFormError] = useState(false);
+  const [formEmpty, setFormEmpty] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(name, email, message);
+
+    if (!name || !email || !message) {
+      setFormEmpty(true);
+      return;
+    }
+
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        process.env.REACT_APP_EMAILJS_USER_ID
+      )
+      .then(
+        (result) => {
+          setFormSubmitted(true);
+        },
+        (error) => {
+          setFormEmpty(false);
+          setFormError(true);
+        }
+      );
   };
 
   return (
@@ -47,25 +73,55 @@ const Contact = () => {
         </div>
         <div className='contact-form'>
           <p className='contact-subtitle'>Send a Message</p>
-          <form>
-            <input type='text' placeholder='Name' required />
-            <input type='email' placeholder='Email' required />
-            <textarea
-              name='message'
-              id='message'
-              cols='30'
-              rows='10'
-              placeholder='Message'
-              required
-            ></textarea>
-            <button
-              className='form-submit-button'
-              onClick={(e) => handleSubmit(e)}
-              type='submit'
-            >
-              Send
-            </button>
-          </form>
+          {formSubmitted ? (
+            <p className='error-message'>Sent! We'll get back to you soon!</p>
+          ) : (
+            <form ref={formRef}>
+              <input
+                name='name'
+                type='text'
+                placeholder='Name'
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+              />
+              <input
+                name='email'
+                type='email'
+                placeholder='Email'
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+              <textarea
+                name='message'
+                id='message'
+                cols='30'
+                rows='10'
+                placeholder='Message'
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                required
+              ></textarea>
+              {formError ? (
+                <p className='error-message'>
+                  Something went wrong. Please try again.
+                </p>
+              ) : null}
+              {formEmpty ? (
+                <p className='error-message'>
+                  Please fill out all sections before submitting.
+                </p>
+              ) : null}
+              <button
+                className='form-submit-button'
+                onClick={(e) => handleSubmit(e)}
+                type='submit'
+              >
+                Send
+              </button>
+            </form>
+          )}
         </div>
       </div>
     </div>
