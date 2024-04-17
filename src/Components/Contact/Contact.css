@@ -66,7 +66,7 @@
   width: 25px;
   height: 25px;
   color: white;
-  margin: 0 10px;
+  margin: 10px;
 }
 
 form {
@@ -114,4 +114,21 @@ textarea::placeholder,
 .error-message {
   font-size: 14px;
   text-align: center;
+}
+
+/* media queries */
+@media (max-width: 741px) {
+  .contact-title {
+    text-align: center;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 90%;
+  }
 }
