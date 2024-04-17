@@ -8,7 +8,10 @@
 
 .projects-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
 }
 
 .projects-title {
