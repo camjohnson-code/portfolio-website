@@ -1,11 +1,28 @@
 import React from 'react';
 import './Projects.css';
 import Project from '../Project/Project';
-import WorkoutMetricsImage from '../../Images/WorkoutMetrics.fit.png';
-import QuintessentialCocktailsImage from '../../Images/Quintessential Cocktails.png';
-import RancidTomatillosImage from '../../Images/Rancid Tomatillos.png';
+import WorkoutMetricsImage from '../../Images/WorkoutMetrics.fit.webp';
+import QuintessentialCocktailsImage from '../../Images/Quintessential Cocktails.webp';
+import RancidTomatillosImage from '../../Images/Rancid Tomatillos.webp';
+import { motion } from 'framer-motion';
 
-const Projects = () => {
+const fadeInAnimationVariants = {
+  initial: {
+    opacity: 0,
+    y: 100,
+  },
+  animate: (index) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: index * 0.25,
+      duration: 0.75,
+      ease: [0.12, 0.25, 0.51, 0.99],
+    },
+  }),
+};
+
+const Projects = ({ prefersReducedMotion }) => {
   const projectsInfo = {
     project1: {
       title: 'WorkoutMetrics.fit',
@@ -33,16 +50,28 @@ const Projects = () => {
     },
   };
 
-  const projects = Object.keys(projectsInfo).map((project) => {
+  const projects = Object.keys(projectsInfo).map((project, index) => {
+    const initial = prefersReducedMotion ? {} : 'initial';
+    const animate = prefersReducedMotion ? {} : 'animate';
+
     return (
-      <Project
+      <motion.div
         key={project}
-        title={projectsInfo[project].title}
-        description={projectsInfo[project].description}
-        image={projectsInfo[project].image}
-        projectLink={projectsInfo[project].projectLink}
-        deployLink={projectsInfo[project].deployLink}
-      />
+        variants={fadeInAnimationVariants}
+        initial={initial}
+        whileInView={animate}
+        viewport={{ once: true }}
+        custom={index}
+      >
+        <Project
+          key={project}
+          title={projectsInfo[project].title}
+          description={projectsInfo[project].description}
+          image={projectsInfo[project].image}
+          projectLink={projectsInfo[project].projectLink}
+          deployLink={projectsInfo[project].deployLink}
+        />
+      </motion.div>
     );
   });
 

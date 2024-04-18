@@ -14,6 +14,7 @@
 
 .hero-section {
   z-index: 10;
+  overflow: hidden;
 }
 
 .headshot {
@@ -28,7 +29,7 @@
   z-index: 20;
   margin-top: -80px;
   margin-bottom: 5px;
-  font-family: Outfit, sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-weight: 700;
   letter-spacing: 5px;
   font-size: 80px;
@@ -100,9 +101,9 @@
   }
 }
 
-@media (max-width: 577px) {
+@media (max-width: 612px) {
   .social-logos {
-    left: 15vw;
+    display: none;
   }
 }
 
@@ -113,12 +114,6 @@
   }
   .hero-subtitle {
     font-size: 14px;
-  }
-}
-
-@media (max-width: 495px) {
-  .social-logos {
-    left: 10vw;
   }
 }
 
@@ -133,9 +128,6 @@
 }
 
 @media (max-width: 425px) {
-  .social-logos {
-    left: 5vw;
-  }
   .hero-title {
     font-size: 30px;
     margin-top: -35px;
@@ -143,18 +135,9 @@
 }
 
 @media (max-width: 382px) {
-  .social-logos {
-    display: none;
-  }
   .hero-title {
     font-size: 25px;
     margin-top: -35px;
-  }
-}
-
-@media (max-width: 360px) {
-  .social-logos {
-    left: 10vw;
   }
 }
 

@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import './NavBar.css';
 import { LuDownload } from 'react-icons/lu';
 import { Link } from 'react-scroll';
+import { motion } from 'framer-motion';
 
-const NavBar = () => {
+const NavBar = ({prefersReducedMotion}) => {
   const [downloadMessage, setDownloadMessage] = useState('Download Resume');
+
   const handleDownload = () => {
     setDownloadMessage('Downloaded!');
     setTimeout(() => {
@@ -13,7 +15,12 @@ const NavBar = () => {
   };
 
   return (
-    <nav className='nav'>
+    <motion.nav
+      animate={prefersReducedMotion ? {} : { opacity: 1 }}
+      initial={prefersReducedMotion ? {} : { opacity: 0 }}
+      transition={{ delay: 1, duration: 1 }}
+      className='nav'
+    >
       <p className='logo-name'>Cameron Johnson</p>
       <ul className='nav-links'>
         <Link
@@ -59,7 +66,7 @@ const NavBar = () => {
           {downloadMessage} <LuDownload />
         </button>
       </a>
-    </nav>
+    </motion.nav>
   );
 };
 

@@ -1,10 +1,12 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './Contact.css';
 import LinkedInLogo from '../../Images/In-White-96@2x.png';
 import GithubLogo from '../../Images/github-mark-white.png';
 import emailjs from 'emailjs-com';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
-const Contact = () => {
+const Contact = ({ prefersReducedMotion }) => {
   const formRef = useRef();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -12,6 +14,32 @@ const Contact = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [formError, setFormError] = useState(false);
   const [formEmpty, setFormEmpty] = useState(false);
+  const { ref: inViewRef1, inView: inView1 } = useInView({
+    triggerOnce: true,
+  });
+  const { ref: inViewRef2, inView: inView2 } = useInView({
+    triggerOnce: true,
+  });
+  const animation1 = useAnimation();
+  const animation2 = useAnimation();
+
+  useEffect(() => {
+    if (inView1 && !prefersReducedMotion) {
+      animation1.start({
+        opacity: 1,
+        transition: { duration: 0.75, delay: 0.25 },
+      });
+    }
+  }, [inView1, animation1]);
+
+  useEffect(() => {
+    if (inView2 && !prefersReducedMotion) {
+      animation2.start({
+        opacity: 1,
+        transition: { delay: 0.5, duration: 0.75 },
+      });
+    }
+  }, [inView2, animation2]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -43,7 +71,12 @@ const Contact = () => {
     <div className='contact'>
       <p className='contact-title'>Contact</p>
       <div className='contact-container'>
-        <div className='contact-info'>
+        <motion.div
+          ref={inViewRef1}
+          initial={prefersReducedMotion ? {} : { opacity: 0 }}
+          animate={animation1}
+          className='contact-info'
+        >
           <div className='contact-info-main'>
             <p className='contact-subtitle'>Let's Connect</p>
             <p className='contact-availability'>
@@ -70,8 +103,13 @@ const Contact = () => {
               />
             </a>
           </div>
-        </div>
-        <div className='contact-form'>
+        </motion.div>
+        <motion.div
+          ref={inViewRef2}
+          initial={prefersReducedMotion ? {} : { opacity: 0 }}
+          animate={animation2}
+          className='contact-form'
+        >
           <p className='contact-subtitle'>Send a Message</p>
           {formSubmitted ? (
             <p className='error-message'>Sent! We'll get back to you soon!</p>
@@ -122,7 +160,7 @@ const Contact = () => {
               </button>
             </form>
           )}
-        </div>
+        </motion.div>
       </div>
     </div>
   );
