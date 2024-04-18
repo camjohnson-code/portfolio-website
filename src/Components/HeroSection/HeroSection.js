@@ -3,11 +3,20 @@ import './HeroSection.css';
 import Headshot from '../../Images/headshot-no-background.png';
 import LinkedInLogo from '../../Images/In-White-96@2x.png';
 import GithubLogo from '../../Images/github-mark-white.png';
+import { motion } from 'framer-motion';
 
-const HeroSection = () => {
+const HeroSection = ({ prefersReducedMotion }) => {
   return (
     <div id='home' className='hero-container'>
-      <div className='social-logos'>
+      <motion.div
+        initial={prefersReducedMotion ? {} : { opacity: 0 }}
+        animate={prefersReducedMotion ? {} : { opacity: 0.3 }}
+        transition={{
+          delay: 1,
+          duration: 1,
+        }}
+        className='social-logos'
+      >
         <a target='#' href='https://github.com/camjohnson-code'>
           <img src={GithubLogo} alt='github-logo' className='github-logo' />
         </a>
@@ -18,11 +27,44 @@ const HeroSection = () => {
             className='linkedin-logo'
           />
         </a>
-      </div>
+      </motion.div>
       <div className='hero-section'>
-        <img src={Headshot} alt='headshot' className='headshot' />
-        <h1 className='hero-title'>Cameron Johnson</h1>
-        <p className='hero-subtitle'>Software Engineer</p>
+        <motion.img
+          initial={prefersReducedMotion ? {} : { x: '-25%', opacity: 0 }}
+          animate={prefersReducedMotion ? {} : { x: 0, opacity: 1 }}
+          transition={{
+            delay: 0.45,
+            duration: 1,
+            ease: [0.05, 0.52, 0.19, 0.96],
+          }}
+          src={Headshot}
+          alt='headshot'
+          className='headshot'
+        />
+        <motion.h1
+          initial={prefersReducedMotion ? {} : { y: '100%', opacity: 0 }}
+          animate={prefersReducedMotion ? {} : { y: 0, opacity: 1 }}
+          transition={{
+            delay: 0.55,
+            duration: 0.75,
+            ease: 'easeOut',
+          }}
+          className='hero-title'
+        >
+          Cameron Johnson
+        </motion.h1>
+        <motion.p
+          initial={prefersReducedMotion ? {} : { y: '100%', opacity: 0 }}
+          animate={prefersReducedMotion ? {} : { y: 0, opacity: 1 }}
+          transition={{
+            delay: 1.05,
+            duration: 0.45,
+            ease: 'easeOut',
+          }}
+          className='hero-subtitle'
+        >
+          Software Engineer
+        </motion.p>
       </div>
     </div>
   );
