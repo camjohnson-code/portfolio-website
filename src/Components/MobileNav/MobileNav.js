@@ -20,58 +20,108 @@ const MobileNav = ({ prefersReducedMotion }) => {
       transition={{ delay: 1, duration: 1 }}
       className='mobile-nav'
     >
-      <div className='hamburger-container'>
-        <RxHamburgerMenu
-          className={`hamburger ${isOpen ? 'open' : ''}`}
-          onClick={toggleMenu}
-        />
-      </div>
-      <ul className={`menu ${isOpen ? 'open' : ''}`}>
-        <Link
-          activeClass='active'
-          to='home'
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration={500}
-          onClick={toggleMenu}
+      <button className='hamburger-container' onClick={toggleMenu}>
+        <motion.span
+          animate={isOpen ? { rotate: 45, y: 3 } : { rotate: 0 }}
+          transition={{ duration: 0.15, ease: 'linear' }}
+          className={`hamburger-div ${isOpen ? 'open' : ''}`}
+        ></motion.span>
+        <motion.span
+          animate={isOpen ? { rotate: -45, y: -4 } : { rotate: 0 }}
+          transition={{ duration: 0.15, ease: 'linear' }}
+          className={`hamburger-div ${isOpen ? 'open' : ''}`}
+        ></motion.span>
+      </button>
+      <motion.ul
+        initial={{ x: '100%' }}
+        animate={isOpen ? { x: '0%' } : { x: '-100%' }}
+        transition={{ duration: 0.5, ease: [0.15, 0.39, 0.28, 0.99] }}
+        className={`menu ${isOpen ? 'open' : ''}`}
+      >
+        <motion.li
+          initial={prefersReducedMotion ? {} : { opacity: 0, x: '-100%' }}
+          animate={isOpen ? { opacity: 1, x: 0 } : {}}
+          transition={{
+            delay: 0.2,
+            duration: 0.75,
+            ease: [0.12, 0.25, 0.51, 0.99],
+          }}
+        >
+          <Link
+            activeClass='active'
+            to='home'
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={500}
+            onClick={toggleMenu}
+            className='mobile-nav-link'
+          >
+            Home
+          </Link>
+        </motion.li>
+        <motion.li
+          initial={prefersReducedMotion ? {} : { opacity: 0, x: '-100%' }}
+          animate={isOpen ? { opacity: 1, x: 0 } : {}}
+          transition={{
+            delay: 0.4,
+            duration: 0.75,
+            ease: [0.12, 0.25, 0.51, 0.99],
+          }}
+        >
+          <Link
+            activeClass='active'
+            to='projects'
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            onClick={toggleMenu}
+            className='mobile-nav-link'
+          >
+            Projects
+          </Link>
+        </motion.li>
+        <motion.li
+          initial={prefersReducedMotion ? {} : { opacity: 0, x: '-100%' }}
+          animate={isOpen ? { opacity: 1, x: 0 } : {}}
+          transition={{
+            delay: 0.6,
+            duration: 0.75,
+            ease: [0.12, 0.25, 0.51, 0.99],
+          }}
+        >
+          <Link
+            activeClass='active'
+            to='contact'
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            onClick={toggleMenu}
+            className='mobile-nav-link'
+          >
+            Contact
+          </Link>
+        </motion.li>
+        <motion.li
+          initial={prefersReducedMotion ? {} : { opacity: 0, x: '-100%' }}
+          animate={isOpen ? { opacity: 1, x: 0 } : {}}
+          transition={{
+            delay: 0.8,
+            duration: 0.75,
+            ease: [0.12, 0.25, 0.51, 0.99],
+          }}
           className='mobile-nav-link'
         >
-          Home
-        </Link>
-        <Link
-          activeClass='active'
-          to='projects'
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-          onClick={toggleMenu}
-          className='mobile-nav-link'
-        >
-          Projects
-        </Link>
-        <Link
-          activeClass='active'
-          to='contact'
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-          onClick={toggleMenu}
-          className='mobile-nav-link'
-        >
-          Contact
-        </Link>
-        <li className='mobile-nav-link'>
           <a href='https://www.github.com/camjohnson-code' target='#'>
             <img src={GitHubLogo} className='mobile-social-icon' />
           </a>
           <a href='https://www.linkedin.com/in/camjohnson-code' target='#'>
             <img src={LinkedInLogo} className='mobile-social-icon' />
           </a>
-        </li>
-      </ul>
+        </motion.li>
+      </motion.ul>
     </motion.nav>
   );
 };
