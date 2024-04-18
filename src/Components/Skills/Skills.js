@@ -38,6 +38,7 @@ const Skills = ({ prefersReducedMotion }) => {
     'HTML',
     'CSS',
     'Framer Motion',
+    'Google Firebase',
     'After Effects',
     'Photoshop',
     'Premiere Pro',
