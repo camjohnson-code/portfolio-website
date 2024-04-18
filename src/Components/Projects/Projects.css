@@ -8,7 +8,10 @@
 
 .projects-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
 }
 
 .projects-title {
@@ -18,4 +21,11 @@
   -webkit-text-fill-color: transparent;
   font-size: 40px;
   margin: 20px 0;
+}
+
+/* media queries */
+@media screen and (max-width: 741px) {
+  .projects-title {
+    text-align: center;
+  }
 }

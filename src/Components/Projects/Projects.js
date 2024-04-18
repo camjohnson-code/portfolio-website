@@ -20,8 +20,8 @@ const Projects = () => {
       description:
         'Quintessential Cocktails is a web application designed to help users discover and learn about various cocktails. It leverages React and React Router to provide a seamless browsing experience. Users can view detailed cocktail information, and save their favorite cocktails for easy access.',
       image: QuintessentialCocktailsImage,
-      projectLink: 'https://camjohnson-code.github.io/cocktail-finder/',
-      deployLink: 'https://github.com/camjohnson-code/cocktail-finder',
+      projectLink: 'https://github.com/camjohnson-code/cocktail-finder',
+      deployLink: 'https://camjohnson-code.github.io/cocktail-finder/',
     },
     project3: {
       title: 'Rancid Tomatillos',

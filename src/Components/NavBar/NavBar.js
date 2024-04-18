@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './NavBar.css';
 import { LuDownload } from 'react-icons/lu';
+import { Link } from 'react-scroll';
 
 const NavBar = () => {
   const [downloadMessage, setDownloadMessage] = useState('Download Resume');
@@ -15,9 +16,39 @@ const NavBar = () => {
     <nav className='nav'>
       <p className='logo-name'>Cameron Johnson</p>
       <ul className='nav-links'>
-        <li className='nav-link'>Work</li>
-        <li className='nav-link'>Skills</li>
-        <li className='nav-link'>Contact</li>
+        <Link
+          activeClass='active'
+          to='projects'
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={500}
+          className='nav-link'
+        >
+          Work
+        </Link>
+        <Link
+          activeClass='active'
+          to='skills'
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className='nav-link'
+        >
+          Skills
+        </Link>
+        <Link
+          activeClass='active'
+          to='contact'
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className='nav-link'
+        >
+          Contact
+        </Link>
       </ul>
       <a
         onClick={handleDownload}

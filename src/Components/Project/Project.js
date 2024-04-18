@@ -12,12 +12,12 @@ const Project = ({ projectLink, deployLink, description, title, image }) => {
       <h2 className='project-title'>{title}</h2>
       <p className='project-description'>{description}</p>
       <div className='project-links'>
-        <a className='project-link' href={projectLink}>
-          <img className='link-img' src={GithubLogo}></img>
+        <a target='#' className='project-link' href={projectLink}>
+          <img alt='Link to GitHub repo' className='link-img' src={GithubLogo}></img>
         </a>
         {deployLink ? (
-          <a className='project-link' href={deployLink}>
-            <FaLink className='link-img ' />
+          <a target='#' className='project-link' href={deployLink} aria-label='Link to deployed app'>
+            <FaLink alt='Link to deployed app' className='link-img' />
           </a>
         ) : null}
       </div>

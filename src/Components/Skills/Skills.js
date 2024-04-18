@@ -33,7 +33,7 @@ const Skills = () => {
 
   return (
     <div className='skills'>
-      <div className='skills-title'>Skills</div>
+      <p className='skills-title'>Skills</p>
       <div className='skills-container'>{skillButtons}</div>
     </div>
   );

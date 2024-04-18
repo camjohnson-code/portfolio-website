@@ -45,3 +45,21 @@
 a {
   text-decoration: none;
 }
+
+/* Media queries */
+@media (max-width: 789px) {
+  .nav-links {
+    width: 35%;
+  }
+}
+@media (max-width: 704px) {
+  .nav-links {
+    width: 30%;
+  }
+}
+
+@media (max-width: 612px) {
+  .nav {
+    display: none;
+  }
+}

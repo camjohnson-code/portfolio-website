@@ -26,3 +26,11 @@
   align-self: center;
   justify-self: center;
 }
+
+/* media queries */
+@media screen and (max-width: 741px) {
+  .skills-title {
+    text-align: center;
+    align-self: center;
+  }
+}

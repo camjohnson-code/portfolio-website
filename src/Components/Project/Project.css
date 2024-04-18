@@ -1,5 +1,5 @@
 .project {
-  height: 500px;
+  min-height: 500px;
   width: 400px;
   border-radius: 15px;
   background-color: rgba(255, 255, 255, 0.2);
@@ -45,4 +45,11 @@
   width: 40px;
   margin: 0 10px;
   color: white;
+}
+
+/* media queries */
+@media (max-width: 1311px) {
+  .project {
+    width: 300px;
+  }
 }
