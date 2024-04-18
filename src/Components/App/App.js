@@ -19,7 +19,7 @@ function App() {
       <div className='background-square'></div>
       <HeroSection id='home' className='hero' />
       <Projects id='projects' className='projects' />
-      <Skills className='skills' />
+      <Skills id='skills' className='skills' />
       <Contact id='contact' className='contact' />
       <Footer className='footer' />
     </div>
