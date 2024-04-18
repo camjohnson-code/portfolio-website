@@ -8,7 +8,14 @@
   color: white;
   font-family: 'Lato', sans-serif;
   overflow: hidden;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.loading-screen {
+  z-index: 0;
 }
 
 .nav {
