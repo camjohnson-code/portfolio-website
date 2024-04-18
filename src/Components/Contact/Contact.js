@@ -27,7 +27,7 @@ const Contact = ({ prefersReducedMotion }) => {
     if (inView1 && !prefersReducedMotion) {
       animation1.start({
         opacity: 1,
-        transition: { duration: 0.75 },
+        transition: { duration: 0.75, delay: 0.25 },
       });
     }
   }, [inView1, animation1]);
@@ -36,7 +36,7 @@ const Contact = ({ prefersReducedMotion }) => {
     if (inView2 && !prefersReducedMotion) {
       animation2.start({
         opacity: 1,
-        transition: { delay: 0.25, duration: 0.75 },
+        transition: { delay: 0.5, duration: 0.75 },
       });
     }
   }, [inView2, animation2]);
