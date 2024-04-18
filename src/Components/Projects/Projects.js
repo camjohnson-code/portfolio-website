@@ -1,9 +1,9 @@
 import React from 'react';
 import './Projects.css';
 import Project from '../Project/Project';
-import WorkoutMetricsImage from '../../Images/WorkoutMetrics.fit.png';
-import QuintessentialCocktailsImage from '../../Images/Quintessential Cocktails.png';
-import RancidTomatillosImage from '../../Images/Rancid Tomatillos.png';
+import WorkoutMetricsImage from '../../Images/WorkoutMetrics.fit.webp';
+import QuintessentialCocktailsImage from '../../Images/Quintessential Cocktails.webp';
+import RancidTomatillosImage from '../../Images/Rancid Tomatillos.webp';
 import { motion } from 'framer-motion';
 
 const fadeInAnimationVariants = {
