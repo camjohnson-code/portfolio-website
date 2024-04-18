@@ -13,21 +13,18 @@ import { motion, AnimatePresence } from 'framer-motion';
 const App = () => {
   const [loading, setLoading] = useState(true);
   const [mainPage, setMainPage] = useState(false);
-  const [loadingScreenMessage, setLoadingScreenMessage] =
-    useState('Loading...');
   const prefersReducedMotion = window.matchMedia(
     '(prefers-reduced-motion: reduce)'
   ).matches;
 
   useEffect(() => {
     const handleLoad = () => {
-      setLoading(false);
       setTimeout(() => {
-        setLoadingScreenMessage('Welcome!');
-      }, 2000);
+        setLoading(false);
+      }, 1000);
       setTimeout(() => {
         setMainPage(true);
-      }, 4000);
+      }, 3000);
     };
 
     window.addEventListener('load', handleLoad);
@@ -40,17 +37,17 @@ const App = () => {
   return (
     <AnimatePresence>
       <LoadingScreen
-        loadingScreenMessage={loadingScreenMessage}
+      key='loading-screen'
         loading={loading}
-        exit={{ opacity: 1 }}
         className='loading-screen'
       />
       {mainPage && (
         <motion.div
+          key='main-page'
           className='App'
           initial={prefersReducedMotion ? {} : { x: '-100vw' }}
           animate={prefersReducedMotion ? {} : { x: 0 }}
-          transition={{ duration: 0.75, ease: 'easeOut' }}
+          transition={{ duration: 0.75, ease: [0.15, 0.39, 0.28, 0.99] }}
         >
           <MobileNav
             prefersReducedMotion={prefersReducedMotion}
@@ -65,7 +62,7 @@ const App = () => {
             transition={{
               delay: 0.75,
               duration: 1,
-              ease: [0.05, 0.52, 0.19, 0.89],
+              ease: [0.15, 0.39, 0.28, 0.99],
             }}
             className='background-circle'
           ></motion.div>
@@ -79,7 +76,7 @@ const App = () => {
             transition={{
               delay: 0.35,
               duration: 1,
-              ease: [0.05, 0.52, 0.19, 0.89],
+              ease: [0.15, 0.39, 0.28, 0.99],
             }}
             className='background-square'
           ></motion.div>
@@ -88,9 +85,21 @@ const App = () => {
             id='home'
             className='hero'
           />
-          <Projects prefersReducedMotion={prefersReducedMotion} id='projects' className='projects' />
-          <Skills prefersReducedMotion={prefersReducedMotion} id='skills' className='skills' />
-          <Contact prefersReducedMotion={prefersReducedMotion} id='contact' className='contact' />
+          <Projects
+            prefersReducedMotion={prefersReducedMotion}
+            id='projects'
+            className='projects'
+          />
+          <Skills
+            prefersReducedMotion={prefersReducedMotion}
+            id='skills'
+            className='skills'
+          />
+          <Contact
+            prefersReducedMotion={prefersReducedMotion}
+            id='contact'
+            className='contact'
+          />
           <Footer className='footer' />
         </motion.div>
       )}

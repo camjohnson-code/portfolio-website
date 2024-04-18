@@ -33,9 +33,9 @@ const HeroSection = ({ prefersReducedMotion }) => {
           initial={prefersReducedMotion ? {} : { x: '-25%', opacity: 0 }}
           animate={prefersReducedMotion ? {} : { x: 0, opacity: 1 }}
           transition={{
-            delay: 0.45,
+            delay: 0.25,
             duration: 1,
-            ease: [0.05, 0.52, 0.19, 0.96],
+            ease: [0.15, 0.39, 0.28, 0.99],
           }}
           src={Headshot}
           alt='headshot'
