@@ -27,11 +27,7 @@ const App = () => {
       }, 3000);
     };
 
-    window.addEventListener('load', handleLoad);
-
-    return () => {
-      window.removeEventListener('load', handleLoad);
-    };
+    handleLoad();
   }, []);
 
   return (
