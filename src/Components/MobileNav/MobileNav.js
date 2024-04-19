@@ -114,10 +114,10 @@ const MobileNav = ({ prefersReducedMotion }) => {
           }}
           className='mobile-nav-link'
         >
-          <a href='https://www.github.com/camjohnson-code' target='#'>
+          <a href='https://www.github.com/camjohnson-code' target='_blank'>
             <img src={GitHubLogo} className='mobile-social-icon' />
           </a>
-          <a href='https://www.linkedin.com/in/camjohnson-code' target='#'>
+          <a href='https://www.linkedin.com/in/camjohnson-code' target='_blank'>
             <img src={LinkedInLogo} className='mobile-social-icon' />
           </a>
         </motion.li>

@@ -12,11 +12,11 @@ const Project = ({ projectLink, deployLink, description, title, image }) => {
       <h2 className='project-title'>{title}</h2>
       <p className='project-description'>{description}</p>
       <div className='project-links'>
-        <a target='#' className='project-link' href={projectLink}>
+        <a target='_blank' className='project-link' href={projectLink}>
           <img alt='Link to GitHub repo' className='link-img' src={GithubLogo}></img>
         </a>
         {deployLink ? (
-          <a target='#' className='project-link' href={deployLink} aria-label='Link to deployed app'>
+          <a target='_blank' className='project-link' href={deployLink} aria-label='Link to deployed app'>
             <FaLink alt='Link to deployed app' className='link-img' />
           </a>
         ) : null}
