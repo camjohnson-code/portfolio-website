@@ -17,10 +17,10 @@ const HeroSection = ({ prefersReducedMotion }) => {
         }}
         className='social-logos'
       >
-        <a target='#' href='https://github.com/camjohnson-code'>
+        <a target='_blank' href='https://github.com/camjohnson-code'>
           <img src={GithubLogo} alt='github-logo' className='github-logo' />
         </a>
-        <a target='#' href='https://www.linkedin.com/in/camjohnson-code/'>
+        <a target='_blank' href='https://www.linkedin.com/in/camjohnson-code/'>
           <img
             src={LinkedInLogo}
             alt='linkedin-logo'
