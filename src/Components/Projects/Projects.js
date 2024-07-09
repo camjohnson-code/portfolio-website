@@ -3,7 +3,7 @@ import './Projects.css';
 import Project from '../Project/Project';
 import WorkoutMetricsImage from '../../Images/WorkoutMetrics.fit.webp';
 import QuintessentialCocktailsImage from '../../Images/Quintessential Cocktails.webp';
-import RancidTomatillosImage from '../../Images/Rancid Tomatillos.webp';
+import StereogramGenius from '../../Images/Stereogram Genius.webp';
 import { motion } from 'framer-motion';
 
 const fadeInAnimationVariants = {
@@ -33,20 +33,20 @@ const Projects = ({ prefersReducedMotion }) => {
       deployLink: 'https://workout-metrics.vercel.app/',
     },
     project2: {
+      title: 'Stereogram Genius',
+      description:
+        'Stereogram Genius is a mobile application developed using Expo and React Native, allowing users to create and share stereograms with hidden text. Additionally, the app includes functionality to generate random stereograms.',
+      image: StereogramGenius,
+      projectLink: 'https://github.com/camjohnson-code/cocktail-finder',
+      deployLink: null,
+    },
+    project3: {
       title: 'Quintessential Cocktails',
       description:
         'Quintessential Cocktails is a web application designed to help users discover and learn about various cocktails. It leverages React and React Router to provide a seamless browsing experience. Users can view detailed cocktail information, and save their favorite cocktails for easy access.',
       image: QuintessentialCocktailsImage,
       projectLink: 'https://github.com/camjohnson-code/cocktail-finder',
       deployLink: 'https://camjohnson-code.github.io/cocktail-finder/',
-    },
-    project3: {
-      title: 'Rancid Tomatillos',
-      description:
-        'Rancid Tomatillos is a project aimed at building a web application that provides information about movies, including ratings, reviews, and other related data. This project utilizes React and React Router to create a user-friendly interface for browsing movies and accessing relevant information.',
-      image: RancidTomatillosImage,
-      projectLink: 'https://github.com/camjohnson-code/rancid-tomatillos',
-      deployLink: null,
     },
   };
 
