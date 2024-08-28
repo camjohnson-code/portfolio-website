@@ -2,8 +2,8 @@ import React from 'react';
 import './Projects.css';
 import Project from '../Project/Project';
 import WorkoutMetricsImage from '../../Images/WorkoutMetrics.fit.webp';
-import QuintessentialCocktailsImage from '../../Images/Quintessential Cocktails.webp';
-import StereogramGenius from '../../Images/Stereogram Genius.webp';
+import CarePulseImage from '../../Images/CarePulse.png';
+import ChatWithPDFImage from '../../Images/ChatWithPDF.webp';
 import { motion } from 'framer-motion';
 
 const fadeInAnimationVariants = {
@@ -25,6 +25,14 @@ const fadeInAnimationVariants = {
 const Projects = ({ prefersReducedMotion }) => {
   const projectsInfo = {
     project1: {
+      title: 'Chat With PDF',
+      description:
+        'Chat With PDF is an AI-powered web application that allows users to upload PDF documents to their account and interact with an AI chatbot to ask questions about the content of the PDF. Whether you need to extract specific information, summarize sections, or understand complex documents, Chat With PDF makes it easy to get answers quickly.',
+      image: ChatWithPDFImage,
+      projectLink: 'https://github.com/camjohnson-code/chat-with-pdf',
+      deployLink: 'https://www.chatwithpdf.dev/',
+    },
+    project2: {
       title: 'WorkoutMetrics.fit',
       description:
         'WorkoutMetrics.fit is an app that allows users to get a deeper look into their Strava data without needing to be a Strava Premium user. It gives users the ability to see their personal heatmaps, save and favorite workouts to their hall of fame, and upload activities to their Strava account.',
@@ -32,21 +40,13 @@ const Projects = ({ prefersReducedMotion }) => {
       projectLink: 'https://github.com/camjohnson-code/workout-metrics',
       deployLink: 'https://workout-metrics.vercel.app/',
     },
-    project2: {
-      title: 'Stereogram Genius',
-      description:
-        'Stereogram Genius is a mobile application developed using Expo and React Native, allowing users to create and share stereograms with hidden text. Additionally, the app includes functionality to generate random stereograms.',
-      image: StereogramGenius,
-      projectLink: 'https://github.com/camjohnson-code/cocktail-finder',
-      deployLink: null,
-    },
     project3: {
-      title: 'Quintessential Cocktails',
+      title: 'CarePulse',
       description:
-        'Quintessential Cocktails is a web application designed to help users discover and learn about various cocktails. It leverages React and React Router to provide a seamless browsing experience. Users can view detailed cocktail information, and save their favorite cocktails for easy access.',
-      image: QuintessentialCocktailsImage,
-      projectLink: 'https://github.com/camjohnson-code/cocktail-finder',
-      deployLink: 'https://camjohnson-code.github.io/cocktail-finder/',
+        'CarePulse is a fictional web application that allows patients to schedule appointments with their healthcare providers. On the admin side, healthcare providers can view and manage their appointments. Upon confirmation or cancellation, patients will receive automated text notifications.',
+      image: CarePulseImage,
+      projectLink: 'https://github.com/camjohnson-code/CarePulse/',
+      deployLink: undefined,
     },
   };
 
