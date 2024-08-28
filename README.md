@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# Portfolio Site
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![App demo](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXh5dzg1OGZnaHg3bzFuZjNvOHlmY2t4a3V1bWdjdWV2eHd5c3Q2YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7BXi3BQVrpf6TZPgMt/giphy.gif)
 
-## Available Scripts
+Welcome to my portfolio site! This project showcases my work as a frontend developer, including various projects and skills I've acquired. Built with React and Framer Motion, this site demonstrates my ability to create dynamic, interactive user interfaces.
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contact](#contact)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Interactive Animations:** Smooth and engaging animations powered by Framer Motion.
+- **Responsive Design:** Optimized for both desktop and mobile devices.
+- **Project Showcase:** Highlights of my key projects with detailed descriptions.
+- **Contact Form:** Easily get in touch with me for opportunities and inquiries.
 
-### `npm test`
+## Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **React:** A JavaScript library for building user interfaces.
+- **Framer Motion:** A library for animations and gestures in React applications.
+- **HTML/CSS:** For structuring and styling the content.
+- **JavaScript:** For interactive features and logic.
 
-### `npm run build`
+## Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+If you wish to run this locally, everything but the contact form will work. In order to run the contact form, some environment variables will be needed. Reach out to me and we can discuss a solution.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To set up this project locally, follow these steps:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/camjohnson-code/portfolio-site.git
+   
+2. **Navigate to the project directory:**
+   ```bash
+   cd portfolio-site
+   
+3. **Install the dependencies:**
+   ```bash
+   npm install
+   
+4. **Start the development server:**
+   ```bash
+   npm start
+   
+## Usage
 
-### `npm run eject`
+Once the development server is running, you can:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Explore the different sections of the portfolio to see the various projects and skills showcased.
+- Experience the interactive animations and transitions that enhance user engagement.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Contact
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+For any questions, feedback, or opportunities, feel free to reach out to me through the following channels:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Email:** [cjohnson10176@gmail.com](mailto:cjohnson10176@gmail.com)
+- **GitHub:** [camjohnson-code](https://github.com/camjohnson-code)
+- **LinkedIn:** [Your LinkedIn Profile](https://www.linkedin.com/in/camjohnson-code)
