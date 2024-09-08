@@ -4,7 +4,7 @@ import { LuDownload } from 'react-icons/lu';
 import { Link } from 'react-scroll';
 import { motion } from 'framer-motion';
 
-const NavBar = ({prefersReducedMotion}) => {
+const NavBar = ({ prefersReducedMotion }) => {
   const [downloadMessage, setDownloadMessage] = useState('Download Resume');
 
   const handleDownload = () => {
@@ -23,39 +23,45 @@ const NavBar = ({prefersReducedMotion}) => {
     >
       <p className='logo-name'>Cameron Johnson</p>
       <ul className='nav-links'>
-        <Link
-          activeClass='active'
-          to='projects'
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration={500}
-          className='nav-link'
-        >
-          Work
-        </Link>
-        <Link
-          activeClass='active'
-          to='skills'
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-          className='nav-link'
-        >
-          Skills
-        </Link>
-        <Link
-          activeClass='active'
-          to='contact'
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-          className='nav-link'
-        >
-          Contact
-        </Link>
+        <li>
+          <Link
+            activeClass='active'
+            to='projects'
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={500}
+            className='nav-link'
+          >
+            Work
+          </Link>
+        </li>
+        <li>
+          <Link
+            activeClass='active'
+            to='skills'
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className='nav-link'
+          >
+            Skills
+          </Link>
+        </li>
+        <li>
+          <Link
+            activeClass='active'
+            to='contact'
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className='nav-link'
+          >
+            Contact
+          </Link>
+        </li>
       </ul>
       <a
         onClick={handleDownload}

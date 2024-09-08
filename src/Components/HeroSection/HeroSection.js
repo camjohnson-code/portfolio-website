@@ -1,6 +1,6 @@
 import React from 'react';
 import './HeroSection.css';
-import Headshot from '../../Images/headshot-no-background.png';
+import Headshot from '../../Images/headshot-no-background.webp';
 import LinkedInLogo from '../../Images/In-White-96@2x.png';
 import GithubLogo from '../../Images/github-mark-white.png';
 import { motion } from 'framer-motion';
@@ -17,10 +17,17 @@ const HeroSection = ({ prefersReducedMotion }) => {
         }}
         className='social-logos'
       >
-        <a target='_blank' href='https://github.com/camjohnson-code'>
+        <a
+          target='_blank rel="noreferrer"'
+          href='https://github.com/camjohnson-code'
+        >
           <img src={GithubLogo} alt='github-logo' className='github-logo' />
         </a>
-        <a target='_blank' href='https://www.linkedin.com/in/camjohnson-code/'>
+        <a
+          target='_blank'
+          rel='noreferrer'
+          href='https://www.linkedin.com/in/camjohnson-code/'
+        >
           <img
             src={LinkedInLogo}
             alt='linkedin-logo'

@@ -1,6 +1,5 @@
 import './MobileNav.css';
 import React, { useState } from 'react';
-import { RxHamburgerMenu } from 'react-icons/rx';
 import GitHubLogo from '../../Images/github-mark-white.png';
 import LinkedInLogo from '../../Images/In-White-96@2x.png';
 import { Link } from 'react-scroll';
@@ -114,11 +113,27 @@ const MobileNav = ({ prefersReducedMotion }) => {
           }}
           className='mobile-nav-link'
         >
-          <a href='https://www.github.com/camjohnson-code' target='_blank'>
-            <img src={GitHubLogo} className='mobile-social-icon' />
+          <a
+            href='https://www.github.com/camjohnson-code'
+            rel='noreferrer'
+            target='_blank'
+          >
+            <img
+              src={GitHubLogo}
+              alt='Link to my GitHub profile'
+              className='mobile-social-icon'
+            />
           </a>
-          <a href='https://www.linkedin.com/in/camjohnson-code' target='_blank'>
-            <img src={LinkedInLogo} className='mobile-social-icon' />
+          <a
+            href='https://www.linkedin.com/in/camjohnson-code'
+            rel='noreferrer'
+            target='_blank'
+          >
+            <img
+              src={LinkedInLogo}
+              alt='Link to my LinkedIn profile'
+              className='mobile-social-icon'
+            />
           </a>
         </motion.li>
       </motion.ul>
