@@ -30,7 +30,7 @@ const Contact = ({ prefersReducedMotion }) => {
         transition: { duration: 0.75, delay: 0.25 },
       });
     }
-  }, [inView1, animation1]);
+  }, [inView1, animation1, prefersReducedMotion]);
 
   useEffect(() => {
     if (inView2 && !prefersReducedMotion) {
@@ -39,7 +39,7 @@ const Contact = ({ prefersReducedMotion }) => {
         transition: { delay: 0.5, duration: 0.75 },
       });
     }
-  }, [inView2, animation2]);
+  }, [inView2, animation2, prefersReducedMotion]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
