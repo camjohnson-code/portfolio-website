@@ -1,3 +1,8 @@
+# Redirect
+
+This project has been archived. To view the current iteration of my portfolio, [click here](https://github.com/camjohnson-code/portfolio)
+
+
 # Portfolio Site
 
 ![App demo](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXh5dzg1OGZnaHg3bzFuZjNvOHlmY2t4a3V1bWdjdWV2eHd5c3Q2YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7BXi3BQVrpf6TZPgMt/giphy.gif)
